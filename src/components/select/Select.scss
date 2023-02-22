@@ -1,0 +1,46 @@
+@import 'styles/config.scss';
+
+.react-select-container {
+  @include govuk-font($size: 19, $line-height: 1.25);
+
+  .react-select__single-value {
+    color: $text-color;
+  }
+
+  .react-select__control {
+    border: $govuk-border-width-form-element solid $govuk-input-border-colour;
+    border-radius: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+
+    &--is-focused {
+      box-shadow: inset 0 0 0 $govuk-border-width-form-element;
+      outline: $govuk-focus-width solid $govuk-focus-colour !important;
+      outline-offset: 0;
+    }
+
+    &--is-disabled {
+      background-color: #e1e4e6;
+      color: $text-color;
+
+      .react-select__placeholder,
+      input {
+        color: $text-color;
+      }
+    }
+
+    @include govuk-if-ie8 {
+      border-width: $govuk-border-width-form-element * 2;
+    }
+
+    &:hover {
+      border: $govuk-border-width-form-element solid $govuk-input-border-colour;
+    }
+  }
+
+  &.govuk-input--error {
+    .react-select__control {
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.custom-option {
+  transition: background 60ms;
+}
+
+.custom-option:hover {
+  background: #deebff !important;
+  transition-delay: 60ms;
+}
+
+.custom-option.react-select__option--is-focused {
+  background: none;
+}
+
+.custom-option.react-select__option--is-selected {
+  background: #2684ff;
+}
