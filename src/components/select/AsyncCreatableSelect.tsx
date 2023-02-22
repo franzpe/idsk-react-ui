@@ -4,10 +4,10 @@ import { OptionTypeBase, GroupTypeBase, OptionsType } from 'react-select';
 import cx from 'classnames';
 import debounce from 'lodash.debounce';
 
-import FormGroup from 'components/form/FormGroup';
+import FormGroup from 'components/Form/FormGroup';
+import InfoIcon from '../Icon/InfoIcon';
 
 import './Select.scss';
-import InfoIcon from '../icon/InfoIcon';
 
 export type SelectProps = {
   label?: string;

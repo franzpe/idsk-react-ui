@@ -2,8 +2,9 @@ import { forwardRef, useState } from 'react';
 import RSelect, { OptionTypeBase, Props } from 'react-select';
 import cx from 'classnames';
 
+import FormGroup from 'components/Form/FormGroup';
+
 import './Select.scss';
-import FormGroup from 'components/form/FormGroup';
 
 export type SelectProps = {
   label?: string;

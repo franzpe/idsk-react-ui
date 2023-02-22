@@ -4,7 +4,7 @@ import { GroupTypeBase, OptionTypeBase, OptionsType } from 'react-select';
 import cx from 'classnames';
 import debounce from 'lodash.debounce';
 
-import FormGroup from 'components/form/FormGroup';
+import FormGroup from 'components/Form/FormGroup';
 
 import './Select.scss';
 
