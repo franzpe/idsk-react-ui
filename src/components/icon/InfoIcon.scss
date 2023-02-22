@@ -1,0 +1,9 @@
+.info-icon {
+  color: #0065b3;
+  cursor: pointer;
+  margin-left: 5px;
+
+  &:hover {
+    color: darken(#0065b3, 20%);
+  }
+}
