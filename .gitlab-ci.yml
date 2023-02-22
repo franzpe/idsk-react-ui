@@ -1,0 +1,19 @@
+
+stages:
+  - publish
+
+variables:
+  CI_REGISTRY_IMAGE: '${DOCKER_REGISTRY}/${CI_PROJECT_NAME}'
+
+publish:
+  stage: publish
+  image: node:13-alpine
+  before_script:
+    - npm config set registry http://apd11a.csru.sk.cloud:8081/repository/npm-private/
+    - npm config set -- '//apd11a.csru.sk.cloud:8081/repository/npm-private/:_authToken' "${NPM_TOKEN}"
+    - npm config set timeout 300000
+    - npm config set prefer-offline true
+  script:
+    - npm publish 
+  tags:
+    - docker-executor

@@ -1,0 +1,49 @@
+@import '../../styles/config.scss';
+
+$idsk-tertiary-button-colour: govuk-colour('orange', $legacy: 'grey-4');
+$idsk-tertiary-button-hover-colour: govuk-colour('brown');
+$idsk-tertiary-button-shadow-colour: govuk-shade($idsk-tertiary-button-colour, 40%);
+$idsk-tertiary-button-text-colour: govuk-colour('black');
+
+$button-shadow-size: $govuk-border-width-form-element;
+
+.button {
+  align-items: center;
+  display: inline-flex !important;
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+.idsk-button--tertiary {
+  background-color: $idsk-tertiary-button-colour !important;
+  box-shadow: 0 $button-shadow-size 0 $idsk-tertiary-button-shadow-colour !important;
+
+  &,
+  &:link,
+  &:visited,
+  &:active,
+  &:hover {
+    color: $idsk-tertiary-button-text-colour;
+  }
+
+  // alphagov/govuk_template includes a specific a:link:focus selector
+  // designed to make unvisited links a slightly darker blue when focussed, so
+  // we need to override the text colour for that combination of selectors so
+  // so that unvisited links styled as buttons do not end up with dark blue
+  // text when focussed.
+  @include govuk-compatibility(govuk_template) {
+    &:link:focus {
+      color: $idsk-tertiary-button-text-colour !important;
+    }
+  }
+
+  &:hover {
+    background-color: $idsk-tertiary-button-hover-colour !important;
+
+    &[disabled] {
+      background-color: $idsk-tertiary-button-colour;
+    }
+  }
+}
