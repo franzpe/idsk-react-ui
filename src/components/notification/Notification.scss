@@ -1,0 +1,30 @@
+@import 'styles/config.scss';
+
+.notification-wrapper {
+  background-color: darken(#ffbf47, 15%);
+
+  .notification-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: govuk-spacing(4) govuk-spacing(4);
+  }
+
+  a {
+    color: lighten(govuk-colour('blue'), 12%);
+
+    &:hover {
+      color: govuk-colour('blue');
+    }
+  }
+
+  .notification-close {
+    color: govuk-colour('black');
+    margin-left: govuk-spacing(2);
+    text-decoration: none;
+
+    &:hover {
+      color: lighten(govuk-colour('black'), 5%);
+    }
+  }
+}
