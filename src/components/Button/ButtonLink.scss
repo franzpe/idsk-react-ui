@@ -1,0 +1,19 @@
+@import 'styles/config.scss';
+
+.button-link {
+  @include govuk-font($size: 19, $line-height: 19px);
+  background: none !important;
+  border: none;
+  color: govuk-colour('blue');
+  cursor: pointer;
+  padding: 0 !important;
+  text-decoration: underline;
+
+  &:hover {
+    color: govuk-colour('dark-blue');
+  }
+
+  &:disabled {
+    color: govuk-colour('mid-grey');
+  }
+}

@@ -1,0 +1,30 @@
+@import 'styles/config.scss';
+
+.button-icon {
+  background: transparent;
+  border: none;
+  color: govuk-colour('black');
+  cursor: pointer;
+
+  &:hover {
+    color: lighten(govuk-colour('black'), 40%);
+  }
+
+  &:disabled {
+    i {
+      color: #e1e4e6;
+    }
+  }
+}
+
+.button-icon--green {
+  color: govuk-colour('green');
+}
+
+.button-icon--dark-red {
+  color: govuk-colour('dark-red');
+}
+
+.buttion-icon--inherit {
+  color: inherit;
+}
