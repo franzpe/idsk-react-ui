@@ -1,0 +1,26 @@
+@import 'styles/config';
+
+.nav-list-item {
+  border-bottom: 2px solid #bfc1c3;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 20px 0px;
+}
+
+.nav-list-item-link {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.nav-list-item-link-text {
+  text-decoration: underline;
+}
+
+.nav-list-item-icon {
+  color: $text-color !important;
+  margin-left: 5px;
+  text-decoration: none;
+}
