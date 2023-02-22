@@ -1,0 +1,70 @@
+.th {
+  line-height: 1;
+
+  span {
+    vertical-align: text-top;
+  }
+
+  .th-sortable-btn {
+    font-weight: inherit;
+    padding: 0 10px 0 0 !important;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: text-top;
+
+    &:before {
+      content: ' \25bc';
+      font-size: 0.5em;
+      position: absolute;
+      right: -2px;
+      top: 9px;
+    }
+
+    &:after {
+      content: ' \25b2';
+      font-size: 0.5em;
+      position: absolute;
+      right: -2px;
+      top: 1px;
+    }
+  }
+
+  &[aria-sort='descending'] {
+    .th-sortable-btn {
+      &:after {
+        content: ' \25bc';
+        font-size: 0.8em;
+        position: absolute;
+        right: -5px;
+        top: 2px;
+      }
+
+      &:before {
+        content: '';
+      }
+    }
+  }
+
+  &[aria-sort='ascending'] {
+    .th-sortable-btn {
+      &:after {
+        content: ' \25b2';
+        font-size: 0.8em;
+        position: absolute;
+        right: -5px;
+        top: 2px;
+      }
+
+      &:before {
+        content: '';
+      }
+    }
+  }
+}
+
+.govuk-table__header--numeric.th {
+  .th-sortable-btn {
+    text-align: right;
+  }
+}
