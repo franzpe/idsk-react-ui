@@ -1,15 +1,11 @@
 {
   "name": "@franzpe/idsk-react-ui",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "React idsk component library",
   "author": "",
   "license": "ISC",
   "scripts": {
     "rollup": "rollup -c"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@apd14a.csru.sk.cloud:cip/idsk-react.git"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -42,8 +38,5 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
-  "poublishConfig": {
-    "registry": "https://npm.pkg.github.com/franzpe"
-  }
+  "types": "dist/index.d.ts"
 }
