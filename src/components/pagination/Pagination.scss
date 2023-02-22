@@ -1,0 +1,124 @@
+@import 'styles/config';
+
+.pagination {
+  &.pagination-disabled {
+    pointer-events: none;
+
+    button,
+    a,
+    input {
+      color: govuk-colour('mid-grey');
+    }
+
+    input {
+      background-color: govuk-colour('light-grey');
+    }
+  }
+
+  @include mq($from: desktop) {
+    margin-left: -govuk-spacing(1);
+    margin-right: -govuk-spacing(1);
+
+    text-align: justify;
+  }
+
+  .pagination__list {
+    align-items: center;
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include mq($from: desktop) {
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+  }
+
+  .pagination__results {
+    font-size: 19px;
+    margin-left: 20px;
+    margin-top: 0;
+    padding: govuk-spacing(1);
+
+    @include mq($from: desktop) {
+      display: inline-block;
+      float: right;
+      margin-bottom: 0;
+      margin-top: 6px;
+      vertical-align: middle;
+    }
+  }
+
+  .pagination__item {
+    @include govuk-font(19);
+    display: inline-block;
+  }
+
+  .pagination__item--active,
+  .pagination__item--dots {
+    font-weight: bold;
+    padding: govuk-spacing(1) govuk-spacing(2);
+    text-align: center;
+  }
+
+  .pagination__button {
+    font-size: 20px;
+  }
+
+  .pagination__item--dots {
+    display: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .pagination__item--page:nth-child(7) {
+    display: none;
+  }
+
+  .pagination__go-to {
+    margin-left: 20px;
+    padding-left: 5px;
+
+    @include mq($from: desktop) {
+      margin-left: 15px;
+    }
+  }
+
+  .pagination__go-to--label {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  .pagination__go-to--input {
+    text-align: center;
+    width: 40px;
+  }
+
+  .pagination__link {
+    color: govuk-colour('blue');
+    cursor: pointer;
+    display: block;
+    min-width: 25px;
+    padding: govuk-spacing(1);
+    text-align: center;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: govuk-colour('blue');
+    }
+
+    &:hover {
+      color: govuk-colour('light-blue');
+    }
+
+    &:focus {
+      color: govuk-colour('black');
+    }
+  }
+
+  .pagination__item--active {
+    color: govuk-colour('black');
+  }
+}
